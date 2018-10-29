@@ -1,0 +1,14 @@
+<div [ngClass]="{'alert': true,
+                'alert-success': PostLoveIts > 0,
+                'alert-danger': PostLoveIts < 0}" role="alert">
+  <div class='float-right'>{{PostCreated_at | date: 'short'}}</div>
+  <h4 class="alert-heading">{{PostTitle}}</h4>
+  <p>{{PostContent}}</p>
+  <hr>
+  <div class="d-flex flex-row mb-3">
+    <div class="p-2"><button type="button" class="btn btn-outline-success" (click)="onBtn_like()">love it</button></div>
+    <div class="p-2"><button type="button" class="btn btn-outline-danger" (click)="onBtn_Dislike()">Don't love it</button></div>
+    <div class="p-2"><button type="button" class="btn btn-link" disabled> Love: {{PostLoveIts}}</button></div>
+  </div>
+
+</div>
